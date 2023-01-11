@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text , StyleSheet , Image , TouchableOpacity } from 'react-native'
+import { AntDesign, Entypo } from '@expo/vector-icons';
 
 type HeadProps = {
     message  : string,
@@ -15,14 +16,13 @@ export const Header : React.FC<HeadProps> = (props) => {
     return(
         <View style={styles.container}>
             <TouchableOpacity onPress={onDownPress}>
-                <Image style={styles.button}
-                    source={require('../img/ic_keyboard_arrow_down_white.png')} />
+               
+                    <AntDesign name="caretdown" size={24} color="white" />
             </TouchableOpacity>
             <Text onPress={onMessagePress}
-                style={styles.message}>{message.toUpperCase()}</Text>
+                style={styles.message}>{message}</Text>
             <TouchableOpacity onPress={onQueuePress}>
-                <Image style={styles.button}
-                    source={require('../img/ic_queue_music_white.png')} />
+            <Entypo name="menu" size={24} color="white" />
             </TouchableOpacity>
         </View>
     )
@@ -33,7 +33,8 @@ export const Header : React.FC<HeadProps> = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 72,
+    backgroundColor: "black",
+    height: 60,
     paddingTop: 20,
     paddingLeft: 12,
     paddingRight: 12,
@@ -42,9 +43,9 @@ const styles = StyleSheet.create({
   message: {
     flex: 1,
     textAlign: 'center',
-    color: 'rgba(255, 255, 255, 0.72)',
+    color: 'red',
     fontWeight: 'bold',
-    fontSize: 10,
+    fontSize: 15,
   },
   button: {
     opacity: 0.72

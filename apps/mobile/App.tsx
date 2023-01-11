@@ -2,7 +2,8 @@ import { StyleSheet } from "react-native";
 import React from "react";
 import { MyButton } from "@my-workspace/my-ui";
 import { IITImage } from "@my-workspace/my-ui";
-
+import { Album } from "@my-workspace/my-ui";
+import { Header } from "@my-workspace/my-ui";
 import { SliderMusic } from "@my-workspace/my-ui";
 import { Control }  from "@my-workspace/my-ui";
 import { PlayButton }  from "@my-workspace/my-ui";
@@ -15,27 +16,20 @@ import { ApplicationProvider, Text } from "@ui-kitten/components";
 import * as eva from "@eva-design/eva";
 import LottieViewComponent from "./screens/LottieViewComponent";
 
+
 const App = () => {
   return (
     <ApplicationProvider {...eva} theme={eva.light}>
-
-      
-      <MyButton
-        bgColor="black"
-        onPress={() => { }}
-        text="MusicApp"
-        textColor="white"
+      <Header
+         message="NOW PLAYING"
       />
-      
-      <IITImage></IITImage>
-     
+      <Album></Album>
+    
       <RoundButton></RoundButton>
-     
-      
       <MyButton
         bgColor="black"
         onPress={() => { }}
-        text="MusicApp"
+        text="dddd"
         textColor="white"
       />
       <Text>

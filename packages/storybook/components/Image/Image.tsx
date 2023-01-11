@@ -17,7 +17,7 @@ export const IITImage: React.FC<IITImageProps> = (props) => {
 		<View>
 			<Text style={styles.title}>{title}</Text>
 			<Text style={styles.description}>{description}</Text>
-             <Image style={{ width: "100%" , height: 600, borderRadius: 50 }} source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/5/52/Adele_for_Vogue_in_2021.png' }} />
+             <Image style={{ width: "100%" , height: 250, borderRadius: 50 }} source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/5/52/Adele_for_Vogue_in_2021.png' }} />
 		</View>
 	)
 }

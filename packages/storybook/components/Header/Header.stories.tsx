@@ -6,7 +6,7 @@ import { AntDesign , Ionicons , Entypo} from '@expo/vector-icons';
 
 import {Header}  from './Header'
 const HeaderMeta: ComponentMeta<typeof Header> = {
-    title: 'Header Component',
+    title: 'Header exp',
     component: Header,
     argTypes:{
 
