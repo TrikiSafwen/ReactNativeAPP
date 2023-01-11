@@ -15,9 +15,9 @@ export const MyButton = ({ onPress, text }: MyButtonProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 10,
+    paddingHorizontal: 16,
     paddingVertical: 8,
     backgroundColor: "violet",
   },
-  text: { color: "white", textAlign: "center" },
+  text: { color: "black" },
 });
