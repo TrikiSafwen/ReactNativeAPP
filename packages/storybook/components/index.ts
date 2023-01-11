@@ -5,3 +5,4 @@ export * from './RoundButton/RoundButton';
 export * from './PlayButton/PlayButton';
 export * from './Header/Header';
 export * from './Album/Album';
+export * from './TrackDetails/TrackDetails';

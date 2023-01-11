@@ -4,6 +4,7 @@ import { MyButton } from "@my-workspace/my-ui";
 import { IITImage } from "@my-workspace/my-ui";
 import { Album } from "@my-workspace/my-ui";
 import { Header } from "@my-workspace/my-ui";
+import { TrackDetails } from "@my-workspace/my-ui";
 import { SliderMusic } from "@my-workspace/my-ui";
 import { Control }  from "@my-workspace/my-ui";
 import { PlayButton }  from "@my-workspace/my-ui";
@@ -24,7 +25,10 @@ const App = () => {
          message="NOW PLAYING"
       />
       <Album></Album>
-    
+      <TrackDetails
+      title= "Safwen"
+      artiste= "Safwen"
+      />
       <RoundButton></RoundButton>
       <MyButton
         bgColor="black"
