@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-import { AntDesign, Entypo, MaterialIcons, Ionicons } from '@expo/vector-icons';
+import { AntDesign, Feather, MaterialIcons, Ionicons } from '@expo/vector-icons';
 
 type TrackProps = {
     title  : string,
@@ -27,7 +27,7 @@ export const TrackDetails : React.FC<TrackProps> = (props) => {
     return(
       <View style={styles.container}>
       <TouchableOpacity onPress={onAddPress}>
-      <Ionicons name="add-circle" size={24} color="black" />
+      <Ionicons name="add-circle" size={26} color="white" />
       </TouchableOpacity>
       <View style={styles.detailsWrapper}>
         <Text style={styles.title} onPress={onTitlePress}>{title}</Text>
@@ -35,7 +35,7 @@ export const TrackDetails : React.FC<TrackProps> = (props) => {
       </View>
       <TouchableOpacity onPress={onMorePress}>
         <View style={styles.moreButton}>
-        <MaterialIcons name="more" size={24} color="black" />
+        <Feather name="more-horizontal" size={20} color="white" />
         </View>
       </TouchableOpacity>
     </View>
@@ -61,11 +61,11 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: 'red',
+    color: 'white',
     textAlign: 'center',
   },
   artist: {
-    color: 'red',
+    color: 'white',
     fontSize: 12,
     marginTop: 4,
   },
@@ -75,10 +75,8 @@ const styles = StyleSheet.create({
   moreButton: {
     borderColor: 'rgb(255, 255, 255)',
     borderWidth: 2,
-    opacity: 0.72,
-    borderRadius: 10,
-    width: 20,
-    height: 20,
+    borderRadius: 20,
+   
     alignItems: 'center',
     justifyContent: 'center',
   },

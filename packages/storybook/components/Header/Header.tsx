@@ -17,7 +17,7 @@ export const Header : React.FC<HeadProps> = (props) => {
         <View style={styles.container}>
             <TouchableOpacity onPress={onDownPress}>
                
-                    <AntDesign name="caretdown" size={24} color="white" />
+                    <AntDesign name="caretdown" size={20} color="white" />
             </TouchableOpacity>
             <Text onPress={onMessagePress}
                 style={styles.message}>{message}</Text>
@@ -33,9 +33,9 @@ export const Header : React.FC<HeadProps> = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "black",
+  
     height: 60,
-    paddingTop: 20,
+    paddingTop: 30,
     paddingLeft: 12,
     paddingRight: 12,
     flexDirection: 'row',
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   message: {
     flex: 1,
     textAlign: 'center',
-    color: 'red',
+    color: 'white',
     fontWeight: 'bold',
     fontSize: 15,
   },

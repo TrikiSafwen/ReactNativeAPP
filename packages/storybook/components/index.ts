@@ -6,3 +6,7 @@ export * from './PlayButton/PlayButton';
 export * from './Header/Header';
 export * from './Album/Album';
 export * from './TrackDetails/TrackDetails';
+export * from './SliderMusic/SliderMusic';
+export * from './ControlMusic/ControlMusic';
+export * from './SeekBar/SeekBar';
+export * from './Test/Test';
