@@ -1,13 +1,15 @@
 import { StyleSheet } from "react-native";
 import React from "react";
-import { MyButton } from "@my-workspace/my-ui";
+import {MyButton}  from "@my-workspace/my-ui";
 import { IITImage } from "@my-workspace/my-ui";
 import { Album } from "@my-workspace/my-ui";
 import { Header } from "@my-workspace/my-ui";
+import { NavigationContainer } from '@react-navigation/native';
+import { ListMusic } from "@my-workspace/my-ui";
 import { Test } from "@my-workspace/my-ui";
 import { ControlMusic } from "@my-workspace/my-ui";
 import { TrackDetails } from "@my-workspace/my-ui";
-
+import { SeekBar } from "@my-workspace/my-ui";
 import {SliderMusic} from "@my-workspace/my-ui";
 import {  View } from 'react-native'
 import { Control }  from "@my-workspace/my-ui";
@@ -28,18 +30,18 @@ const App = () => {
     <ApplicationProvider {...eva} theme={eva.light} >
       <Header
          message="NOW PLAYING"
+      
       />
       <Album></Album>
       <TrackDetails
       title= "Safwen"
       artiste= "Safwen"
       />
-
-        <SliderMusic></SliderMusic>
-      
+      <SeekBar></SeekBar>
+      <ListMusic></ListMusic>
       <ControlMusic></ControlMusic>
     
-      
+    
     </ApplicationProvider>
     </View>
   );

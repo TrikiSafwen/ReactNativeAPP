@@ -35,7 +35,7 @@ export const TrackDetails : React.FC<TrackProps> = (props) => {
       </View>
       <TouchableOpacity onPress={onMorePress}>
         <View style={styles.moreButton}>
-        <Feather name="more-horizontal" size={20} color="white" />
+        <MaterialIcons name="favorite" size={24} color="white" />
         </View>
       </TouchableOpacity>
     </View>
@@ -73,10 +73,6 @@ const styles = StyleSheet.create({
     opacity: 0.72,
   },
   moreButton: {
-    borderColor: 'rgb(255, 255, 255)',
-    borderWidth: 2,
-    borderRadius: 20,
-   
     alignItems: 'center',
     justifyContent: 'center',
   },

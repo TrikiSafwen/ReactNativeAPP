@@ -1,10 +1,12 @@
 import React from 'react';
 import {View,Text,StyleSheet} from 'react-native';
+
 import Slider from '@react-native-community/slider';
 
 type SliderProps = {
   trackLength: number,
   currentPosition : number,
+  
   onSeek: () => void,
   onSlidingStart: () => void, 
 }
@@ -19,12 +21,12 @@ const minutesAndSeconds = (position) => ([
   pad(position % 60, 2),
 ]);
 
-  export const SliderMusic : React.FC<SliderProps> = (props) => {
-    const { trackLength, currentPosition, onSeek,onSlidingStart } = props;
+export const SliderMusic : React.FC<SliderProps> = (props) => {
+    const { trackLength, currentPosition, onSeek, onSlidingStart } = props;
     const elapsed = minutesAndSeconds(currentPosition);
     const remaining = minutesAndSeconds(trackLength - currentPosition);
 
-    return(
+    return (
       <View style={styles.container}>
       <View style={{flexDirection: 'row'}}>
         <Text style={styles.text}>
@@ -35,7 +37,8 @@ const minutesAndSeconds = (position) => ([
           {trackLength > 1 && "-" + remaining[0] + ":" + remaining[1]}
         </Text>
       </View>
-      <Slider
+      <View>
+     <Slider
         maximumValue={Math.max(trackLength, 1, currentPosition + 1)}
         onSlidingStart={onSlidingStart}
         onSlidingComplete={onSeek}
@@ -45,6 +48,7 @@ const minutesAndSeconds = (position) => ([
         maximumTrackTintColor='rgba(255, 255, 255, 0.14)'
         thumbTintColor='black'
        />
+       </View>
     </View>
     )
 }

@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {useState} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import Slider from '@react-native-community/slider';
 import {SliderProps} from '@react-native-community/slider';
