@@ -1,13 +1,11 @@
 import { StyleSheet } from "react-native";
 import React from "react";
-import MusicPlayerAPP from "./screens/MusicPlayerAPP";
-import {ListMusic} from "./screens/ListMusicAPP";
 import {MyButton}  from "@my-workspace/my-ui";
 import { IITImage } from "@my-workspace/my-ui";
 import { Album } from "@my-workspace/my-ui";
 import { Header } from "@my-workspace/my-ui";
 import { NavigationContainer } from '@react-navigation/native';
-
+import { ListMusic } from "@my-workspace/my-ui";
 import { Test } from "@my-workspace/my-ui";
 import { ControlMusic } from "@my-workspace/my-ui";
 import { TrackDetails } from "@my-workspace/my-ui";
@@ -20,30 +18,46 @@ import { RoundButton } from "@my-workspace/my-ui";
 import { AntDesign, Ionicons, Entypo } from '@expo/vector-icons';
 
 import LottieView from 'lottie-react-native';
-import { createStackNavigator } from '@react-navigation/stack';
+
 import { ApplicationProvider, Text } from "@ui-kitten/components";
 import * as eva from "@eva-design/eva";
-import LottieViewComponent from "./screens/LottieViewComponent";
 
 
-const App = () => {
-  const Stack = createStackNavigator();
+
+const MusicPlayerAPP = ({ navigation }) => {
   return (
     <View style={styles.container} >
     <ApplicationProvider {...eva} theme={eva.light} >
-    <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Welcome" component={MusicPlayerAPP}></Stack.Screen>
-          <Stack.Screen name="Home" component={ListMusic}></Stack.Screen>
-          
-        </Stack.Navigator>
-      </NavigationContainer>
+    <Header
+  message="Now Playing"
+  onQueuePress={() => navigation.navigate('Home')}
+
+/>
+      <Album
+      url ="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8&w=1000&q=80"
+      />
+      <TrackDetails
+      title= "Safwen"
+      artiste= "POP Music 2023 explicit"
+      />
+      
+    
+      
+      <ControlMusic
+      iconp={<AntDesign name="pause" size={36} color="white" />}
+      iconbb={<AntDesign name="play" size={24} color="white" />}
+      iconb={<AntDesign name="pause" size={24} color="white" />}
+      iconf={<AntDesign name="pause" size={24} color="white" />}
+      iconff={<AntDesign name="pause" size={24} color="white" />}
+      />
+     
+    
     </ApplicationProvider>
     </View>
   );
 };
 
-export default App;
+export default MusicPlayerAPP 
 
 const styles = StyleSheet.create({ container: {
   flex: 1,
