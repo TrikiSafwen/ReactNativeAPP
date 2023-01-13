@@ -32,9 +32,10 @@ const App = () => {
     <View style={styles.container} >
     <ApplicationProvider {...eva} theme={eva.light} >
     <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Welcome" component={MusicPlayerAPP}></Stack.Screen>
-          <Stack.Screen name="Home" component={ListMusic}></Stack.Screen>
+         
+          <Stack.Screen name="ListMusic" component={ListMusic}></Stack.Screen>
           
         </Stack.Navigator>
       </NavigationContainer>

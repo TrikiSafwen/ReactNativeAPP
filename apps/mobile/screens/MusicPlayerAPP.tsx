@@ -10,13 +10,13 @@ import { Test } from "@my-workspace/my-ui";
 import { ControlMusic } from "@my-workspace/my-ui";
 import { TrackDetails } from "@my-workspace/my-ui";
 import { SeekBar } from "@my-workspace/my-ui";
-import {SliderMusic} from "@my-workspace/my-ui";
+import { SliderMusic } from "@my-workspace/my-ui";
 import {  View } from 'react-native'
 import { Control }  from "@my-workspace/my-ui";
 import { PlayButton }  from "@my-workspace/my-ui";
 import { RoundButton } from "@my-workspace/my-ui";
 import { AntDesign, Ionicons, Entypo } from '@expo/vector-icons';
-
+import {Sliders} from "./Smusic";
 import LottieView from 'lottie-react-native';
 
 import { ApplicationProvider, Text } from "@ui-kitten/components";
@@ -30,7 +30,7 @@ const MusicPlayerAPP = ({ navigation }) => {
     <ApplicationProvider {...eva} theme={eva.light} >
     <Header
   message="Now Playing"
-  onQueuePress={() => navigation.navigate('Home')}
+  onQueuePress={() => navigation.navigate('ListMusic')}
 
 />
       <Album
@@ -41,14 +41,14 @@ const MusicPlayerAPP = ({ navigation }) => {
       artiste= "POP Music 2023 explicit"
       />
       
-    
+    <Sliders></Sliders>
       
       <ControlMusic
       iconp={<AntDesign name="pause" size={36} color="white" />}
-      iconbb={<AntDesign name="play" size={24} color="white" />}
-      iconb={<AntDesign name="pause" size={24} color="white" />}
-      iconf={<AntDesign name="pause" size={24} color="white" />}
-      iconff={<AntDesign name="pause" size={24} color="white" />}
+      iconbb={<AntDesign name="banckward" size={24} color="white" />}
+      iconb={<AntDesign name="stepbackward" size={24} color="white" />}
+      iconf={<AntDesign name="stepforward" size={24} color="white" />}
+      iconff={<AntDesign name="forward" size={24} color="white" />}
       />
      
     

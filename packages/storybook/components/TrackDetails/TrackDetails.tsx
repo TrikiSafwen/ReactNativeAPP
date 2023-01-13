@@ -35,7 +35,7 @@ export const TrackDetails : React.FC<TrackProps> = (props) => {
       </View>
       <TouchableOpacity onPress={onMorePress}>
         <View style={styles.moreButton}>
-        <MaterialIcons name="favorite" size={24} color="white" />
+        <MaterialIcons name="favorite" size={24} color="#F3006B" />
         </View>
       </TouchableOpacity>
     </View>
@@ -59,14 +59,14 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 'bold',
-    color: 'white',
+    color: '#F3006B',
     textAlign: 'center',
   },
   artist: {
     color: 'white',
-    fontSize: 12,
+    fontSize: 15,
     marginTop: 4,
   },
   button: {

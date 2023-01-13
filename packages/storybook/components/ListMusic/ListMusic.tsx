@@ -33,7 +33,15 @@ const styles = StyleSheet.create({
   },
 });
 
-export const ListMusic = () => {
+
+
+export const ListMusic = (navigation) => {
+
+  function onPress (){
+ 
+   navigation.navigate('Home')
+    
+  }
   return (
     <View style={styles.container}>
       <SectionList
@@ -55,7 +63,7 @@ export const ListMusic = () => {
         renderItem={({item}) =>  (
           <View style={styles.row}>
             <Feather name="music" size={24} color="white" />
-            <Text style={styles.item}>{item}</Text>
+            <Text onPress={onPress} style={styles.item}>{item}</Text>
             <Feather name="play" size={24} color="white" />
           </View>
         )}

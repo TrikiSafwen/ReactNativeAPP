@@ -22,7 +22,7 @@ export const Header : React.FC<HeadProps> = (props) => {
             <Text onPress={onMessagePress}
                 style={styles.message}>{message}</Text>
             <TouchableOpacity onPress={onQueuePress}>
-            <Entypo name="menu" size={24} color="white" />
+            <Entypo name="menu" size={24} color="#F3006B" />
             </TouchableOpacity>
         </View>
     )
