@@ -11,13 +11,7 @@ export const SeekBar: React.FC = (props: SliderProps) =>{
   return (
     <View>
       <Text style={styles.text}>{value && +value.toFixed(3)}</Text>
-      <Slider
-        step={0.1}
-        style={styles.slider}
-        {...props}
-        value={value}
-        onValueChange={setValue}
-      />
+    
     </View>
   );
 };

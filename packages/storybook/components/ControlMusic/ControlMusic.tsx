@@ -9,57 +9,54 @@ import {
 import { AntDesign, Entypo, MaterialIcons, Ionicons, Feather } from '@expo/vector-icons';
 
 type ControlMusicProps = {
-  paused,
-  shuffleOn,
-  repeatOn,
+  iconbb : string;
+  iconb : string;
+  iconp : string;
+  iconf : string;
+  iconff : string;
   onPressPlay,
   onPressPause,
   onBack,
   onForward,
   onPressShuffle,
   onPressRepeat,
-  forwardDisabled,
+  
 	
 }
 
 export const ControlMusic : React.FC<ControlMusicProps> = (props) => {
-    const { paused,  onPressPlay, onPressPause,
+    const { iconb,iconbb,iconp,iconf,iconff ,onPressPlay, onPressPause,
       onBack,
       onForward,
       onPressShuffle,
       onPressRepeat,
-      forwardDisabled,} = props;
+      } = props;
 
     return (
       <View style={styles.container}>
+        
       <TouchableOpacity activeOpacity={0.0} onPress={onPressShuffle}>
-      <Entypo name="shuffle" size={24} color="white" />
+      {iconbb}
       </TouchableOpacity>
       <View style={{width: 40}} />
       <TouchableOpacity onPress={onBack}>
-        <AntDesign name="stepbackward" size={24} color="white" />
+      {iconb}
       </TouchableOpacity>
       <View style={{width: 20}} />
-      {!paused ?
         <TouchableOpacity onPress={onPressPause}>
           <View style={styles.playButton}>
-            <AntDesign name="pause" size={40} color="white" />
+            {iconp}
           </View>
-        </TouchableOpacity> :
-        <TouchableOpacity onPress={onPressPlay}>
-          <View style={styles.playButton}>
-          <AntDesign name="play" size={24} color="white" />
-          </View>
-        </TouchableOpacity>
-      }
-      <View style={{width: 20}} />
-      <TouchableOpacity onPress={onForward}
-        disabled={forwardDisabled}>
-       <AntDesign name="stepforward" size={24} color="white" />
+        </TouchableOpacity> 
+        
+        <View style={{width: 20}} />
+      <TouchableOpacity style={{width: 20}} onPress={onForward}
+        >{iconf}
+       
       </TouchableOpacity>
       <View style={{width: 40}} />
       <TouchableOpacity activeOpacity={0.0} onPress={onPressRepeat}>
-        <Feather name="repeat" size={24} color="white" />
+      {iconff}
       </TouchableOpacity>
     </View>
 )}

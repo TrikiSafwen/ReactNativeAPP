@@ -1,6 +1,6 @@
 import React from 'react';
 import {SectionList, StyleSheet, Text, View} from 'react-native';
-import { AntDesign, Ionicons, Entypo } from '@expo/vector-icons';
+import { AntDesign, Feather, Entypo } from '@expo/vector-icons';
 
 
 const styles = StyleSheet.create({
@@ -38,9 +38,9 @@ export const ListMusic = () => {
     <View style={styles.container}>
       <SectionList
         sections={[
-          {title: 'Triki Safwen', data: ['House Di Track', 'Rap2001-Video Orignale', 'Best 2022 songs']},
+          {title: 'ALBUM : Triki Safwen', data: ['House Di Track', 'Rap2001-Video Orignale', 'Best 2022 songs']},
           {
-            title: 'Ouled Ali Mohamed',
+            title: 'ALBUM : Ouled Ali Mohamed',
             data: [
               'Jackson',
               'James',
@@ -54,9 +54,9 @@ export const ListMusic = () => {
         ]}
         renderItem={({item}) =>  (
           <View style={styles.row}>
-            <Entypo name="music" size={24} color="white" />
+            <Feather name="music" size={24} color="white" />
             <Text style={styles.item}>{item}</Text>
-            <AntDesign name="play" size={24} color="white" />
+            <Feather name="play" size={24} color="white" />
           </View>
         )}
         renderSectionHeader={({section}) => (

@@ -3,7 +3,7 @@ import {
   View,
   Text,
   StyleSheet,
-  Image,
+  ImageBackground,
   TouchableHighlight,
   TouchableOpacity,
   Dimensions,
@@ -21,12 +21,12 @@ export const Album : React.FC<AlbumProps> = (props) => {
 
     return(
       <View style={styles.container}>
-      <TouchableOpacity onPress={onPress}>
-        <Image
-          style={styles.image}
-          source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/5/52/Adele_for_Vogue_in_2021.png'}}
-        />
-      </TouchableOpacity>
+      
+      <ImageBackground style={styles.image}
+        source={{ uri: url }}
+        
+      ></ImageBackground>
+  
     </View>
     )
 }

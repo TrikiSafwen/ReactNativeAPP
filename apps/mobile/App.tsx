@@ -28,19 +28,27 @@ const App = () => {
   return (
     <View style={styles.container} >
     <ApplicationProvider {...eva} theme={eva.light} >
-      <Header
-         message="NOW PLAYING"
-      
+    <Header
+  message="Safwen"
+/>
+      <Album
+      url ="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8&w=1000&q=80"
       />
-      <Album></Album>
       <TrackDetails
       title= "Safwen"
       artiste= "Safwen"
       />
-      <SeekBar></SeekBar>
-      <ListMusic></ListMusic>
-      <ControlMusic></ControlMusic>
+      
     
+      <ListMusic></ListMusic>
+      <ControlMusic
+      iconp={<AntDesign name="pause" size={36} color="white" />}
+      iconbb={<AntDesign name="play" size={24} color="white" />}
+      iconb={<AntDesign name="pause" size={24} color="white" />}
+      iconf={<AntDesign name="pause" size={24} color="white" />}
+      iconff={<AntDesign name="pause" size={24} color="white" />}
+      />
+     
     
     </ApplicationProvider>
     </View>
