@@ -45,7 +45,7 @@ const MusicPlayerAPP = ({ navigation }) => {
       
       <ControlMusic
       backgroundColor="#ECECEC"
-      iconp={<AntDesign name="pause" size={36} color="black" />}
+      iconp={<AntDesign name="pause" size={36} color="white" />}
       iconbb={<AntDesign name="banckward" size={24} color="black" />}
       iconb={<AntDesign name="stepbackward" size={24} color="black" />}
       iconf={<AntDesign name="stepforward" size={24} color="black" />}

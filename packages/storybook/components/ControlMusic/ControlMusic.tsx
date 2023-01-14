@@ -45,7 +45,7 @@ export const ControlMusic : React.FC<ControlMusicProps> = (props) => {
       {iconb}
       </TouchableOpacity>
       <View style={{width: 20}} />
-        <TouchableOpacity style={[styles.roundButton,{backgroundColor}]} onPress={onPressPause}>
+        <TouchableOpacity  onPress={onPressPause}>
           <View style={styles.playButton}>
             {iconp}
           </View>
