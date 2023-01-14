@@ -14,6 +14,7 @@ type ControlMusicProps = {
   iconp : string;
   iconf : string;
   iconff : string;
+  backgroundColor : string
   onPressPlay,
   onPressPause,
   onBack,
@@ -21,11 +22,12 @@ type ControlMusicProps = {
   onPressShuffle,
   onPressRepeat,
   
+  
 	
 }
 
 export const ControlMusic : React.FC<ControlMusicProps> = (props) => {
-    const { iconb,iconbb,iconp,iconf,iconff ,onPressPlay, onPressPause,
+    const { backgroundColor, iconb,iconbb,iconp,iconf,iconff ,onPressPlay, onPressPause,
       onBack,
       onForward,
       onPressShuffle,
@@ -35,27 +37,27 @@ export const ControlMusic : React.FC<ControlMusicProps> = (props) => {
     return (
       <View style={styles.container}>
         
-      <TouchableOpacity activeOpacity={0.0} onPress={onPressShuffle}>
+      <TouchableOpacity style={[styles.roundButton,{backgroundColor}]} activeOpacity={0.0} onPress={onPressShuffle}>
       {iconbb}
       </TouchableOpacity>
       <View style={{width: 40}} />
-      <TouchableOpacity onPress={onBack}>
+      <TouchableOpacity style={[styles.roundButton,{backgroundColor}]} onPress={onBack}>
       {iconb}
       </TouchableOpacity>
       <View style={{width: 20}} />
-        <TouchableOpacity onPress={onPressPause}>
+        <TouchableOpacity style={[styles.roundButton,{backgroundColor}]} onPress={onPressPause}>
           <View style={styles.playButton}>
             {iconp}
           </View>
         </TouchableOpacity> 
         
         <View style={{width: 20}} />
-      <TouchableOpacity style={{width: 20}} onPress={onForward}
+      <TouchableOpacity style={[styles.roundButton,{backgroundColor}]}  onPress={onForward}
         >{iconf}
        
       </TouchableOpacity>
       <View style={{width: 40}} />
-      <TouchableOpacity activeOpacity={0.0} onPress={onPressRepeat}>
+      <TouchableOpacity style={[styles.roundButton,{backgroundColor}]} activeOpacity={0.0} onPress={onPressRepeat}>
       {iconff}
       </TouchableOpacity>
     </View>
@@ -66,12 +68,20 @@ export const ControlMusic : React.FC<ControlMusicProps> = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    
+   
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 20,
   },
+  roundButton: {
+		width: 45,
+		height: 45,
+		borderRadius: 100,
+    backgroundColor:"orange",
+    justifyContent: 'center',
+    alignItems: 'center'
+	},
   playButton: {
     height: 72,
     width: 72,

@@ -44,16 +44,17 @@ const MusicPlayerAPP = ({ navigation }) => {
     <Sliders></Sliders>
       
       <ControlMusic
-      iconp={<AntDesign name="pause" size={36} color="white" />}
-      iconbb={<AntDesign name="banckward" size={24} color="white" />}
-      iconb={<AntDesign name="stepbackward" size={24} color="white" />}
-      iconf={<AntDesign name="stepforward" size={24} color="white" />}
-      iconff={<AntDesign name="forward" size={24} color="white" />}
+      backgroundColor="#ECECEC"
+      iconp={<AntDesign name="pause" size={36} color="black" />}
+      iconbb={<AntDesign name="banckward" size={24} color="black" />}
+      iconb={<AntDesign name="stepbackward" size={24} color="black" />}
+      iconf={<AntDesign name="stepforward" size={24} color="black" />}
+      iconff={<AntDesign name="forward" size={24} color="black" />}
       />
      <MyButton
      text="Up Next"
      />
-    
+  
     </ApplicationProvider>
     </View>
   );

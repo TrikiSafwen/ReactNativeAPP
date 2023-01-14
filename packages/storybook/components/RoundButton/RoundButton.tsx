@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 type RoundButtonProps ={
     backgroundColor : string
     icon : string
-    error: string
+    
 }
 export const RoundButton : React.FC<RoundButtonProps> = (props) => {
     const {backgroundColor , icon} = props;
@@ -32,10 +32,8 @@ export const RoundButton : React.FC<RoundButtonProps> = (props) => {
         <TouchableOpacity style={[styles.roundButton,{backgroundColor}]}
         onPress={onPressFunction}
         >
-            <Text>{icon}</Text>
-            <Text>{count}</Text>
-            <Text>{countChange}</Text>
-            <Text>{backgroundColor}</Text>
+            {icon}
+           
 
         </TouchableOpacity>
     </View>
