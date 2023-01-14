@@ -15,18 +15,18 @@ const AlbumMeta: ComponentMeta<typeof Album> = {
 
         url : "put your url",
         
-        onPress : ()=> {console.log("Onclick")}
+       
         
 
     }
 }
 export default AlbumMeta;
 
-type HeaderStory = ComponentStory<typeof Album>
-export const BasicHeader : HeaderStory = (args) => <Album {...args} />
-export const BasicPause : HeaderStory = (args) => <Album {...args} />
-BasicPause.args = {
-    ...BasicHeader.args,
+type AlbumStory = ComponentStory<typeof Album>
+export const AlbumImage1 : AlbumStory = (args) => <Album {...args} />
+export const AlbumImage2 : AlbumStory = (args) => <Album {...args} />
+AlbumImage2.args = {
+    ...AlbumImage1.args,
     
        url : "Next url"
 }

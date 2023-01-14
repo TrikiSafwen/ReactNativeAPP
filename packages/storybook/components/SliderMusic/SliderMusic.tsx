@@ -38,16 +38,7 @@ export const SliderMusic : React.FC<SliderProps> = (props) => {
         </Text>
       </View>
       <View>
-     <Slider
-        maximumValue={Math.max(trackLength, 1, currentPosition + 1)}
-        onSlidingStart={onSlidingStart}
-        onSlidingComplete={onSeek}
-        value={currentPosition}
-        style={styles.slider}
-        minimumTrackTintColor='#000'
-        maximumTrackTintColor='rgba(255, 255, 255, 0.14)'
-        thumbTintColor='black'
-       />
+    
        </View>
     </View>
     )

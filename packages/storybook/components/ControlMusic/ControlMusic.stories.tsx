@@ -12,7 +12,12 @@ const ControlMeta: ComponentMeta<typeof ControlMusic> = {
 
     },
     args: {
-
+        iconbb:"",
+        iconb:"",
+        iconp:"",
+        iconf:"",
+        iconff:"",
+       
         
         
         
@@ -23,11 +28,15 @@ const ControlMeta: ComponentMeta<typeof ControlMusic> = {
 export default ControlMeta;
 
 type ControlStory = ComponentStory<typeof ControlMusic>
-export const BasicHeader : ControlStory = (args) => <ControlMusic {...args} />
-export const BasicPause : ControlStory = (args) => <ControlMusic {...args} />
-BasicPause.args = {
-    ...BasicHeader.args,
-    
+export const ControlM1 : ControlStory = (args) => <ControlMusic {...args} />
+export const ControlM2 : ControlStory = (args) => <ControlMusic {...args} />
+ControlM2.args = {
+    ...ControlM1.args,
+         
+        iconb:"",
+        iconp:"",
+        iconf:"",
+        
       
 }
 

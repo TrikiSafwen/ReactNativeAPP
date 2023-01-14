@@ -5,7 +5,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react-native';
 import { AntDesign , Ionicons , Entypo} from '@expo/vector-icons'; 
 
 import {TrackDetails}  from './TrackDetails'
-const HeaderMeta: ComponentMeta<typeof TrackDetails> = {
+const TrackMeta: ComponentMeta<typeof TrackDetails> = {
     title: 'Track Details',
     component: TrackDetails,
     argTypes:{
@@ -20,14 +20,14 @@ const HeaderMeta: ComponentMeta<typeof TrackDetails> = {
 
     }
 }
-export default HeaderMeta;
+export default TrackMeta;
 
 type TrackStory = ComponentStory<typeof TrackDetails>
-export const BasicHeader : TrackStory = (args) => <TrackDetails {...args} />
-export const BasicPause : TrackStory = (args) => <TrackDetails {...args} />
-BasicPause.args = {
-    ...BasicHeader.args,
-    
+export const TrackD1 : TrackStory = (args) => <TrackDetails {...args} />
+export const TrackD2 : TrackStory = (args) => <TrackDetails {...args} />
+TrackD2.args = {
+    ...TrackD1.args,
+      artiste : "Mohamed",
        title : "House"
 }
 

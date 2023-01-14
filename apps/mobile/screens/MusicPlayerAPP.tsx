@@ -50,7 +50,9 @@ const MusicPlayerAPP = ({ navigation }) => {
       iconf={<AntDesign name="stepforward" size={24} color="white" />}
       iconff={<AntDesign name="forward" size={24} color="white" />}
       />
-     
+     <MyButton
+     text="Up Next"
+     />
     
     </ApplicationProvider>
     </View>

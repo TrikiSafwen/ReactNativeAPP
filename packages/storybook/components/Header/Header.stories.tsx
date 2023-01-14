@@ -24,8 +24,8 @@ export default HeaderMeta;
 
 type HeaderStory = ComponentStory<typeof Header>
 export const BasicHeader : HeaderStory = (args) => <Header {...args} />
-export const BasicPause : HeaderStory = (args) => <Header {...args} />
-BasicPause.args = {
+export const NextHeader : HeaderStory = (args) => <Header {...args} />
+NextHeader.args = {
     ...BasicHeader.args,
     
        message : "Next Playing"

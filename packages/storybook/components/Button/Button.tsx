@@ -15,9 +15,16 @@ export const MyButton = ({ onPress, text }: MyButtonProps) => {
 
 const styles = StyleSheet.create({
   container: {
+    marginLeft:"38%",
+    marginTop:30,
+    height:44,
     paddingHorizontal: 10,
     paddingVertical: 8,
-    backgroundColor: "violet",
+   
+    alignContent:"center",
+    width:100,
+   
+    
   },
   text: { color: "white", textAlign: "center" },
 });
