@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Button, StyleSheet } from "react-native";
 import React from "react";
 import {MyButton}  from "@my-workspace/my-ui";
 import { IITImage } from "@my-workspace/my-ui";
@@ -37,7 +37,7 @@ const MusicPlayerAPP = ({ navigation }) => {
       url ="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8&w=1000&q=80"
       />
       <TrackDetails
-      title= "Safwen"
+      title= "Mohamed"
       artiste= "POP Music 2023 explicit"
       />
       
@@ -50,8 +50,9 @@ const MusicPlayerAPP = ({ navigation }) => {
       iconf={<AntDesign name="stepforward" size={24} color="white" />}
       iconff={<AntDesign name="forward" size={24} color="white" />}
       />
-     
-    
+     <MyButton 
+     text="Up Next"/>
+
     </ApplicationProvider>
     </View>
   );
